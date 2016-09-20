@@ -1,6 +1,20 @@
 # AIDArabic - Accurate Online Disambiguation of Entities for Arabic Text
 
-AIDArabic is part of [AIDA][AIDA].
+AIDArabic is part of [AIDA][AIDA]. 
+
+
+The following guide follows the Original [AIDA github][AIDAGit] .
+  
+**Important** AIDArabic uses [EDRAK][EDRAKData] as a data resource and this guid is updated to use it.
+
+**Note 1:** AIDArabic only does NED (i.e. works in the manual mode). The NER is not yet integrated.
+
+**Note 2:** It is recommended to pre-process the input using [Stanford Arabic Segmenter][ArabSeg] to get better results. It will mainly remove the connected propositions ..etc. For more details are presented [here][AIDArabicThesis].
+
+AIDArabic is described in the following literature [AIDArabic][AIDArabic], [AIDArabic++][AIDAplus].
+
+
+## AIDA Overview
 
 [AIDA][AIDA] is the named entity disambiguation system created by the Databases and Information Systems Department at the [Max Planck Institute for Informatics in Saarbücken, Germany][MPID5]. It identifies mentions of named entities (persons, organizations, locations, songs, products, ...) in English language text and links them to a unique identifier. Most names are ambiguous, especially family names, and AIDA resolves this ambiguity. See the EMNLP 2011 publication [EMNLP2011] for a detailed description of how it works and the VLDB 2011 publication [VLDB2011] for a description of our Web demo. Read on for a more in-depth introduction and hands-on examples of how to use AIDA.
 
@@ -16,7 +30,7 @@ You can also ask questions or discuss AIDA on our aida-users mailing list:
  aida-users-subscribe@lists.mpi-inf.mpg.de or https://lists.mpi-inf.mpg.de/listinfo/aida-users
  ```
  
-## AIDA Overview
+
 
 AIDA is a framework and online tool for entity detection and disambiguation. Given a natural-language text, it maps mentions of ambiguous names onto canonical entities (e.g., individual people or places) registered in the Wikipedia-derived [YAGO2][YAGO] [YAGO2] knowledge base. 
 
@@ -58,7 +72,7 @@ To use AIDA with YAGO2, download the repository we provide on our [AIDA website]
 
 Get the Entity Repository (22 GB):
 
-    curl -O http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/AIDA_entity_repository_2010-08-17v10.sql.bz2
+    curl -O http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/edrak_en20150112_ar20141218.sql.bz2
     
 Import it into a postgres database:
 
@@ -595,8 +609,19 @@ If you use AIDA in your research, please cite AIDA:
 * [MilneWiten]: D. Milne and I. H. Witten, “An Effective, Low-Cost Measure of Semantic Relatedness Obtained from Wikipedia Links,” Proceedings of the AAAI 2008 Workshop on Wikipedia and Artificial Intelligence (WIKIAI 2008), Chicago, IL, 2008.
 * [KORE]: J. Hoffart, S. Seufert, D. B. Nguyen, M. Theobald, and G. Weikum, “KORE: Keyphrase Overlap Relatedness for Entity Disambiguation,” Proceedings of the 21st ACM International Conference on Information and Knowledge Management, CIKM 2012, Hawaii, USA, 2012, pp. 545–554.
 
+## References AIDArabic
+* [AIDArabic]:  M. A. Yosef, M. Spaniol and G. Weikum, "A Named-Entity Disambiguation Framework for Arabic Text," In 8th Workshop on Exploiting Semantic Annotations in Information Retrieval, CIKM 2015, ACM 2015. 
+* [AIDAplus]: M. H. Gad-Elrab, M. A. Yosef and G. Weikum, "Named Entity Disambiguation for Resource-Poor Languages," In 8th Workshop on Exploiting Semantic Annotations in Information Retrieval, CIKM 2015, ACM 2015. 
+* [EDRAK]: M. H. Gad-Elrab, M. A. Yosef and G. Weikum, "EDRAK: Entity-Centric Data Resource for Arabic Knowledge," In 2nd Workshop on Arabic NLP, ACL 2015.  
+
+
+
 [AIDA]: http://www.mpi-inf.mpg.de/yago-naga/aida/
 [MPID5]: http://www.mpi-inf.mpg.de/departments/d5/index.html
 [Postgres]: http://www.postgresql.org
 [YAGO]: http://www.yago-knowledge.org
 [CoreNLP]: http://nlp.stanford.edu/software/corenlp.shtml
+[AIDAGit]: https://github.com/yago-naga/aida
+[ArabSeg]: http://nlp.stanford.edu/projects/arabic.shtml
+[AIDArabicThesis]: http://people.mpi-inf.mpg.de/~gadelrab/downloads/Mohamed_Gadelrab_thesis.pdf
+[EDRAKData]: https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/
