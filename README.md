@@ -1,10 +1,8 @@
 # AIDArabic - Accurate Online Disambiguation of Entities for Arabic Text
 
-AIDArabic is part of [AIDA][AIDA]. 
+AIDArabic is an extension of [AIDA][AIDAGit].
 
 
-The following guide follows the Original [AIDA github][AIDAGit] .
-  
 **Important** AIDArabic uses [EDRAK][EDRAKData] as a data resource and this guid is updated to use it.
 
 **Note 1:** AIDArabic only does NED (i.e. works in the manual mode). The NER is not yet integrated.
@@ -12,6 +10,8 @@ The following guide follows the Original [AIDA github][AIDAGit] .
 **Note 2:** It is recommended to pre-process the input using [Stanford Arabic Segmenter][ArabSeg] to get better results. It will mainly remove the connected propositions ..etc. For more details are presented [here][AIDArabicThesis].
 
 AIDArabic is described in the following literature [AIDArabic2014], [AIDAplus2015].
+
+For the configuration, please continue in this guide.
 
 
 ## AIDA Overview
