@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This web.xml file is not required when using Servlet 3.0 container, 
+	see implementation details http://jersey.java.net/nonav/documentation/latest/jax-rs.html -->
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>Aida Web Service</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>mpi.aida.service.web</param-value>
+		</init-param>
+        <init-param>
+            <param-name>javax.json.stream.JsonGenerator.prettyPrinting</param-name>
+            <param-value>true</param-value>
+        </init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Aida Web Service</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+	<listener>
+	    <listener-class>mpi.aida.service.web.AidaServiceContext</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>DoSFilter</filter-name>
+		<filter-class>org.eclipse.jetty.servlets.DoSFilter</filter-class>
+		<init-param>
+			<param-name>maxRequestsPerSec</param-name>
+			<param-value>5</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>QoSFilter</filter-name>
+		<filter-class>org.eclipse.jetty.servlets.QoSFilter</filter-class>
+		<async-supported>true</async-supported>
+		<init-param>
+			<param-name>maxRequests</param-name>
+			<param-value>8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>suspendMs</param-name>
+			<param-value>60000</param-value>
+		</init-param>
+		<init-param>
+			<param-name>managedAttr</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>QoSFilter</filter-name>
+		<url-pattern>/service/disambiguate-defaultsettings</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>QoSFilter</filter-name>
+		<url-pattern>/service/disambiguate</url-pattern>
+	</filter-mapping>
+</web-app>
