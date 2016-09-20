@@ -601,6 +601,37 @@ If you use AIDA in your research, please cite AIDA:
       pages = {782--792}
     }
 
+## Citing AIDArabic
+
+If you use AIDArabic in your research, please cite:
+
+    @inproceedings{AIDArabic,
+      title={AIDArabic A Named-Entity Disambiguation Framework for Arabic Text},
+      author={Yosef, Mohamed Amir and Spaniol, Marc and Weikum, Gerhard},
+      booktitle={Proceedings of the EMNLP 2014 Workshop on Arabic Natural Language Processing (ANLP)},
+      pages={187--195},
+      year={2014},
+      organization={Association for Computational Linguistics}
+    }
+    
+    @inproceedings{AIDAplus,
+     author = {Gad-Elrab, Mohamed H. and Yosef, Mohamed Amir and Weikum, Gerhard},
+     title = {Named Entity Disambiguation for Resource-Poor Languages},
+     booktitle = {Proceedings of the Eighth Workshop on Exploiting Semantic Annotations in Information Retrieval},
+     series = {ESAIR '15},
+     year = {2015},
+     isbn = {978-1-4503-3790-8},
+     location = {Melbourne, Australia},
+     pages = {29--34},
+     numpages = {6},
+     url = {http://doi.acm.org/10.1145/2810133.2810138},
+     doi = {10.1145/2810133.2810138},
+     acmid = {2810138},
+     publisher = {ACM},
+     address = {New York, NY, USA},
+     keywords = {information extraction, multilingual named entity linking, named entity translation, semantic annotation},
+    } 
+
 ## References
 
 * [EMNLP2011]: J. Hoffart, M. A. Yosef, I. Bordino, H. Fürstenau, M. Pinkal, M. Spaniol, B. Taneva, S. Thater, and G. Weikum, "Robust Disambiguation of Named Entities in Text," Conference on Empirical Methods in Natural Language Processing, EMNLP 2011, Edinburgh, Scotland, 2011, pp. 782–792.
