@@ -80,7 +80,7 @@ Import it into a postgres database:
     
 where <DATABASE> is a database on a PostgreSQL server.
 
-A database dump on a more recent version of Wikipedia is also available: http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/AIDA_entity_repository_2014-01-02v10.sql.bz2
+
 
 ## Setting up AIDA
 
