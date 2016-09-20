@@ -11,7 +11,7 @@ The following guide follows the Original [AIDA github][AIDAGit] .
 
 **Note 2:** It is recommended to pre-process the input using [Stanford Arabic Segmenter][ArabSeg] to get better results. It will mainly remove the connected propositions ..etc. For more details are presented [here][AIDArabicThesis].
 
-AIDArabic is described in the following literature [AIDArabic][AIDArabic], [AIDArabic++][AIDAplus].
+AIDArabic is described in the following literature [AIDArabic2014], [AIDAplus2015].
 
 
 ## AIDA Overview
@@ -609,8 +609,8 @@ If you use AIDA in your research, please cite AIDA:
 * [MilneWiten]: D. Milne and I. H. Witten, “An Effective, Low-Cost Measure of Semantic Relatedness Obtained from Wikipedia Links,” Proceedings of the AAAI 2008 Workshop on Wikipedia and Artificial Intelligence (WIKIAI 2008), Chicago, IL, 2008.
 * [KORE]: J. Hoffart, S. Seufert, D. B. Nguyen, M. Theobald, and G. Weikum, “KORE: Keyphrase Overlap Relatedness for Entity Disambiguation,” Proceedings of the 21st ACM International Conference on Information and Knowledge Management, CIKM 2012, Hawaii, USA, 2012, pp. 545–554.
 
-## References AIDArabic
-* [AIDArabic]:  M. A. Yosef, M. Spaniol and G. Weikum, "A Named-Entity Disambiguation Framework for Arabic Text," In 8th Workshop on Exploiting Semantic Annotations in Information Retrieval, CIKM 2015, ACM 2015. 
+## AIDArabic References 
+* [AIDArabic]:  M. A. Yosef, M. Spaniol and G. Weikum, "A Named-Entity Disambiguation Framework for Arabic Text," In The EMNLP 2014 Workshop on Arabic Natural Language Processing (pp. 187-195). Stroudsburg, ACL 2014.
 * [AIDAplus]: M. H. Gad-Elrab, M. A. Yosef and G. Weikum, "Named Entity Disambiguation for Resource-Poor Languages," In 8th Workshop on Exploiting Semantic Annotations in Information Retrieval, CIKM 2015, ACM 2015. 
 * [EDRAK]: M. H. Gad-Elrab, M. A. Yosef and G. Weikum, "EDRAK: Entity-Centric Data Resource for Arabic Knowledge," In 2nd Workshop on Arabic NLP, ACL 2015.  
 
